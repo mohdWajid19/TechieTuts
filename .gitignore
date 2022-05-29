@@ -1,0 +1,12 @@
+# dependencies installed by npm
+node_modules
+
+# build artefacts
+public
+css
+
+# secrets and errors
+.env
+.log
+
+desktop.ini

@@ -1,0 +1,35 @@
+---
+title : Techie's Tutorials
+layout : "base.njk"
+---
+    
+<section class="hero">
+  <div class="container flow">
+      <div class="hero__content flow">
+        <h1 class="section-title">Welcome to my blog!</h1>
+        <p>Wanna learn DSA and Algos ? having a hard time finding different algorithms, then this is the place for you </p>
+        <p>A perfect place to learn and explore DataStructures and Algorithms altogether at one place.</p>
+        <div class="flex-group">
+          <a href="#featured-articles" class="btn btn--primary">Featured Algorithms</a>
+          <a href="./blog" class="btn btn--neutral">Most recent Algorithms</a>
+        </div>
+      </div>
+      <div>
+        {# <img src="//unsplash.it/510" alt="" class="hero__image"> #}
+        <img src="/assets/home_display.jpg" alt="" class="hero__image">
+      </div>
+  </div>
+</section>
+
+<section id="featured-articles" class="featured-articles">
+  <div class="container flow">
+    <h2 class="section-title text-center ">Featured Algo's</h2>
+    <p class="text-center">Here are some of the important Algorithms you might definitely want to know.</p>
+    <ul role="list" class="articles__list flow">
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+    </ul>
+  </div>
+</section> 
+    
