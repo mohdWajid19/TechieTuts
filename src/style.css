@@ -9,6 +9,8 @@
   --fs-700: 2rem;
   --fs-900: 2.25em;
 
+  --fs-resp:1.2rem;
+
   --ff-body: "Roboto", sans-serif;
   --ff-heading: "Playfair Display", serif;
 
@@ -450,4 +452,24 @@ section,
    100%{
     filter:hue-rotate(360deg);
   }
+}
+
+
+/* Mobile responsive-ness */ 
+@media only screen and (max-width: 600px) {
+  .table-container {
+      width: 90vw;
+      max-height: 80vh;
+      overflow: scroll;
+      background: white;
+  }
+  .inner-table-container{
+      width : max-content;
+      height: max-content;
+  }
+  h1, h2, h3{
+    font-weight: var(--fw-700);
+    font-size:var(--fs-resp);
+  }
+
 }

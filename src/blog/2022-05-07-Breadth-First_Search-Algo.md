@@ -17,9 +17,10 @@ For example, in the following graph, we start traversal from vertex 2. When we c
 Following are the implementations of simple Breadth-First Traversal from a given source. 
 The implementation uses an adjacency list representation of graphs. STL‘s list container is used to store lists of adjacent nodes and the queue of nodes needed for BFS traversal.
 </p>
-<pre>
-<h2>Python3 Program to print BFS traversal </h2>
 
+<h2>Python3 Program to print BFS traversal </h2>
+<div class="table-container">
+<pre class="inner-table-container">
 from collections import defaultdict
 
 class Graph:
@@ -73,10 +74,11 @@ g.addEdge(3, 3)
 print ("Following is Breadth First Traversal"
                   " (starting from vertex 2)")
 g.BFS(2)
-</pre>
+</pre></div>
 
 <h2>Java program to print BFS traversal</h2>
-<pre> 
+<div class="table-container">
+<pre class="inner-table-container">
 import java.io.*;
 import java.util.*;
  
@@ -150,6 +152,7 @@ class Graph
     }
 }
 </pre>
+</div>
 <p>
 Time Complexity: O(V+E), where V is the number of nodes and E is the number of edges. <br/>
 Auxiliary Space: O(V)

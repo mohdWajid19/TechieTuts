@@ -7,10 +7,11 @@ tags: ["post", "featured"]
 # imageAlt: This is a test
 description: The simple idea of Kadane’s algorithm is to look for all positive contiguous segments of the array (max_ending_here is used for this). And keep track of maximum sum contiguous segment among all positive segments (max_so_far is used for this).
 ---
-<pre>
+
 Kadane’s Algorithm:
 
-<pre>
+<div class="table-container">
+<pre class="inner-table-container">
 Initialize:
     max_so_far = INT_MIN
     max_ending_here = 0
@@ -22,12 +23,15 @@ Loop for each element of the array
   (c) if(max_ending_here < 0)
             max_ending_here = 0
 return max_so_far
-</pre>
-Explanation: 
-The simple idea of Kadane’s algorithm is to look for all positive contiguous segments of the array <br/>(max_ending_here is used for this). And keep track of maximum sum contiguous segment among all positive <br/> segments (max_so_far is used for this). Each time we get a positive sum compare it with max_so_far and <br/> update max_so_far if it is greater than max_so_far 
-<pre>
-    Lets take the example:
-    {-2, -3, 4, -1, -2, 1, 5, -3}
+</pre> </div>
+<p>
+Explanation: <br/>
+The simple idea of Kadane’s algorithm is to look for all positive contiguous segments of the array (max_ending_here is used for this). And keep track of maximum sum contiguous segment among all positive segments (max_so_far is used for this). Each time we get a positive sum compare it with max_so_far and update max_so_far if it is greater than max_so_far 
+</p>
+<div class="table-container">
+<pre class="inner-table-container">
+Lets take the example:
+{-2, -3, 4, -1, -2, 1, 5, -3}
 
     max_so_far = INT_MIN
     max_ending_here = 0
@@ -40,7 +44,7 @@ The simple idea of Kadane’s algorithm is to look for all positive contiguous s
     for i=1,  a[1] =  -3
     max_ending_here = max_ending_here + (-3)
     Since max_ending_here = -3 and max_so_far = -2, max_so_far will remain -2
-    Set max_ending_here = 0 because max_ending_here <pre 0
+    Set max_ending_here = 0 because max_ending_here < 0
       
     
     for i=2,  a[2] =  4
@@ -70,12 +74,14 @@ The simple idea of Kadane’s algorithm is to look for all positive contiguous s
     for i=7,  a[7] =  -3
     max_ending_here = max_ending_here + (-3)
     max_ending_here = 4
-</pre>
-Program: 
-# Python program to find maximum contiguous subarray 
-# Function to find the maximum contiguous subarray
-
-<pre>
+</pre> </div>
+<p>
+Program: <br>
+# Python program to find maximum contiguous subarray  <br>
+# Function to find the maximum contiguous subarray </p>
+<br>
+<div class="table-container">
+<pre class="inner-table-container">
 from sys import maxint
 def maxSubArraySum(a,size):     
     max_so_far = -maxint - 1
@@ -87,18 +93,20 @@ def maxSubArraySum(a,size):
         if max_ending_here < 0:
             max_ending_here = 0  
     return max_so_far
-</pre>
-  
-# Driver function to check the above function
-a = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7]
-print "Maximum contiguous sum is", maxSubArraySum(a,len(a))
- 
-Output:
+</pre> </div>
+  <br>
+  <p>
+# Driver function to check the above function <br>
+a = [-13, -3, -25, -20, -3, -16, -23, -12, -5, -22, -15, -4, -7] <br>
+print "Maximum contiguous sum is", maxSubArraySum(a,len(a)) <br>
+
+Output: <br>
 
 Maximum contiguous sum is 7
-Another approach:
-
-<pre>
+</p> <br>
+<h2> Another approach:</h2>
+<div class="table-container">
+    <pre class="inner-table-container">
 def maxSubArraySum(a,size):
     max_so_far = a[0]
     max_ending_here = 0
@@ -112,40 +120,41 @@ def maxSubArraySum(a,size):
             max_so_far = max_ending_here         
     return max_so_far
 </pre>
-Time Complexity: O(n) 
+</div>
+<p>
+Time Complexity: O(n) <br>
 
 Algorithmic Paradigm: Dynamic Programming <br/>
 Following is another simple implementation suggested by Mohit Kumar. The implementation handles the case <br/>when all numbers in the array are negative. <br/>
+</p>
 
-
-# Python program to find maximum contiguous subarray
-<pre> 
+<h2> Python program to find maximum contiguous subarray</h2>
+<div class="table-container">
+<pre class="inner-table-container">
 def maxSubArraySum(a,size):
     max_so_far =a[0]
     curr_max = a[0]
     for i in range(1,size):
         curr_max = max(a[i], curr_max + a[i])
         max_so_far = max(max_so_far,curr_max)
-         
     return max_so_far
- </pre>
-# Driver function to check the above function
-a = [-2, -3, 4, -1, -2, 1, 5, -3] <br/>
-print"Maximum contiguous sum is" , maxSubArraySum(a,len(a))
- 
-Output: 
+         
+    
+a = [-2, -3, 4, -1, -2, 1, 5, -3] 
+print"Maximum contiguous sum is" , maxSubArraySum(a,len(a)) 
+</pre>
+</div>
+<p> 
+Output: <br>
 
 Maximum contiguous sum is 7 <br/>
 To print the subarray with the maximum sum, we maintain indices whenever we get the maximum sum.  
-<pre>
+</p>
 
 # Python program to print largest contiguous array sum
- 
+ <div class="table-container">
+<pre class="inner-table-container">
 from sys import maxsize
- 
-# Function to find the maximum contiguous subarray
-# and print its starting and end index
-
 def maxSubArraySum(a,size):
     max_so_far = -maxsize - 1
     max_ending_here = 0
@@ -154,32 +163,30 @@ def maxSubArraySum(a,size):
     s = 0
     for i in range(0,size):
         max_ending_here += a[i]
-        if max_so_far <p max_ending_here:
+        if max_so_far <  max_ending_here:
             max_so_far = max_ending_here
             start = s
             end = i
-        if max_ending_here <pre 0:
+        if max_ending_here <  0:
             max_ending_here = 0
             s = i+1
     print ("Maximum contiguous sum is %d"%(max_so_far))
     print ("Starting Index %d"%(start))
     print ("Ending Index %d"%(end))
- </pre>
-# Driver program to test maxSubArraySum
-a = [-2, -3, 4, -1, -2, 1, 5, -3]
-maxSubArraySum(a,len(a))
-Output: 
-
-Maximum contiguous sum is 7
-Starting index 2
-Ending index 6
+a = [-2, -3, 4, -1, -2, 1, 5, -3] 
+maxSubArraySum(a,len(a))  </pre>
+ </div>
+Output: <br>
+<p>
+Maximum contiguous sum is 7 <br> <br>
+Starting index 2 <br>
+Ending index 6 <br> <br>
 Kadane’s Algorithm can be viewed both as a greedy and DP. As we can see that we are keeping a running sum <br/>of integers and when it becomes less than 0, we reset it to 0 (Greedy Part). This is because <br/>continuing with a negative sum is way more worse than restarting with a new range. Now it can also be <br/>viewed as a DP, at each stage we have 2 choices: Either take the current element and continue with <br/>previous sum OR restart a new range. These both choices are being taken care of in the implementation. 
-
-Time Complexity: O(n)
+</p>
+<p>
+Time Complexity: O(n) <br>
 Auxiliary Space: O(1)
-
-
-</pre>
+</p>
 
 
 

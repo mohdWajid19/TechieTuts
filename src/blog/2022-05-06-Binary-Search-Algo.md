@@ -32,7 +32,9 @@ Begin with the mid element of the whole array as search key. <br/>
 </p>
 <h2>Java implementation of recursive Binary Search</h2>
 <p>
-<pre>
+
+<div class="table-container">
+<pre class="inner-table-container">
 class BinarySearch {
 	int binarySearch(int arr[], int l, int r, int x)
 	{
@@ -60,11 +62,15 @@ class BinarySearch {
 	}
 }
 </pre>
+</div>
+
+
 </p>
 
-<p>
-    <h2> Python3 Program for recursive binary search.</h2>
-<pre>
+<h2> Python3 Program for recursive binary search.</h2>
+
+<div class="table-container">
+<pre class="inner-table-container">
 def binarySearch(arr, l, r, x):
 	if r >= l:
 		mid = l + (r - l) // 2
@@ -86,7 +92,7 @@ if result != -1:
 else:
 	print("Element is not present in array")
 </pre>
-</p>
+</div>
 
 <p>
 <strong>

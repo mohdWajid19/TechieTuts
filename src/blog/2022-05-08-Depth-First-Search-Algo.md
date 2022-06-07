@@ -26,8 +26,8 @@ Implementation: <br/>
 Below are implementations of simple Depth First Traversal. The C++ implementation uses an adjacency list representation of graphs. STL’s list container is used to store lists of adjacent nodes.
 </p>
 <h2>Python 3 program to print DFS</h2>
-<pre>
-
+<div class="table-container">
+<pre class="inner-table-container">
 from collections import defaultdict
 
 class Graph:
@@ -64,10 +64,10 @@ g.addEdge(3, 3)
 print("Following is DFS from (starting from vertex 2)")
 g.DFS(2)
 
-</pre> <br/>
+</pre></div> <br/>
 <h2>Java program to print DFS</h2>
-<pre>
-
+<div class="table-container">
+<pre class="inner-table-container">
 import java.io.*;
 import java.util.*;
 
@@ -125,7 +125,7 @@ class Graph {
 		g.DFS(2);
 	}
 }
-</pre>
+</pre></div>
 <p>
 Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph.<br/>
 Space Complexity: O(V), since an extra visited array of size V is required.
@@ -144,8 +144,8 @@ Traverse all the adjacent and unmarked nodes and call the recursive function wit
 Run a loop from 0 to the number of vertices and check if the node is unvisited in the previous DFS, call the recursive function with the current node.
 </p>
 <h2>Java program to print DFS of a disconnected graph</h2>
-<pre>
-
+<div class="table-container">
+<pre class="inner-table-container">
 import java.io.*;
 import java.util.*;
 
@@ -206,7 +206,7 @@ class Graph {
 		g.DFS();
 	}
 }
-</pre>
+</pre></div>
 <p>
 Time complexity: O(V + E), where V is the number of vertices and E is the number of edges in the graph. <br/>
 Space Complexity: O(V), since an extra visited array of size V is required.
