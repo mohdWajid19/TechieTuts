@@ -1,4 +1,14 @@
-# A simple program demonstrating the example and use of Dependency Injection (Constructor-Dependency-Injection-Method). 
+---
+title: Dependency Injection
+author: Mohd wajid
+date: 2023-02-14
+tags: ["post", "featured"]
+# image: /assets/blog/article-1.jpg
+# imageAlt: This is a test
+description: A simple program demonstrating the example and use of Dependency Injection (Constructor-Dependency-Injection-Method). 
+---
+
+A simple program demonstrating the example and use of Dependency Injection (Constructor-Dependency-Injection-Method). 
 #### Note: I have used Csharp as demonstration language, the concept remains same, just the way you write changes. And the example I used uses Constructor-Dependency-Injection-Method.
 
 
